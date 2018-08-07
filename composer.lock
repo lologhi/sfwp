@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0c6d907825a5e83a297ea874838562c",
+    "content-hash": "99232c569b761939ac2cd9956a8b027c",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1677,6 +1677,104 @@
                 }
             ],
             "time": "2017-07-14T14:27:02+00:00"
+        },
+        {
+            "name": "phpforce/common",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpforce/common.git",
+                "reference": "aa96dfb6b0f43024c95a9d9c88396013e7513f9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpforce/common/zipball/aa96dfb6b0f43024c95a9d9c88396013e7513f9c",
+                "reference": "aa96dfb6b0f43024c95a9d9c88396013e7513f9c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/event-dispatcher": ">=2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phpforce\\Common": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David de Boer",
+                    "email": "david@ddeboer.nl",
+                    "homepage": "http://ddeboer.nl"
+                }
+            ],
+            "description": "Common library for the PhpForce Salesforce libraries",
+            "keywords": [
+                "crm",
+                "force.com",
+                "salesforce",
+                "soap",
+                "web services"
+            ],
+            "time": "2014-01-09T10:36:21+00:00"
+        },
+        {
+            "name": "phpforce/soap-client",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpforce/soap-client.git",
+                "reference": "df1d06533d28b34bf7e1a8eb4c6b43316ea25b56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpforce/soap-client/zipball/df1d06533d28b34bf7e1a8eb4c6b43316ea25b56",
+                "reference": "df1d06533d28b34bf7e1a8eb4c6b43316ea25b56",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "phpforce/common": "dev-master",
+                "psr/log": "*"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.3"
+            },
+            "suggest": {
+                "doctrine/common": "For caching SOAP responses",
+                "monolog/monolog": "For logging SOAP transactions"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phpforce\\SoapClient": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David de Boer",
+                    "email": "david@ddeboer.nl",
+                    "homepage": "http://ddeboer.nl"
+                }
+            ],
+            "description": "A PHP client for the Salesforce SOAP API",
+            "keywords": [
+                "crm",
+                "force.com",
+                "salesforce",
+                "soap",
+                "web services"
+            ],
+            "time": "2015-04-05T18:17:07+00:00"
         },
         {
             "name": "psr/cache",
@@ -5906,8 +6004,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
+        "phpforce/soap-client": 20,
         "symfony/lts": 20
     },
     "prefer-stable": false,
